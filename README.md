@@ -1,7 +1,7 @@
 #Icarus
 
-### The blog theme you may fall in love with, coming to Hexo. [Preview](http://ppoffice.github.io/hexo-theme-icarus/)
-![](http://ppoffice.github.io/hexo-theme-icarus/gallery/preview.jpg "")
+### The blog theme you may fall in love with, coming to Hexo. [Preview](https://github.com/huangjihua/icarus)
+![](http://i.imgur.com/UxQrZrg.png)
 
 ## Installation
 
@@ -145,7 +145,7 @@ language: zh-CN
 
 A nice place to show yourself. You can add your own information in your site's `_config.yml`
 
-![](http://ppoffice.github.io/hexo-theme-icarus/gallery/profile.png "")
+ ![](http://i.imgur.com/An6xxGw.png)
 
 ### Post Banner & Thumbnail
 
@@ -155,7 +155,6 @@ Thanks to [atika](https://github.com/atika), you can now add thumbnails and bann
 
 Icarus knows on what screen size you are browsering the website, and reorganize the layout to fit your device.
 
-![](http://ppoffice.github.io/hexo-theme-icarus/gallery/responsive.jpg "")
 
 ### Custom Categories & Tags Pages
 
