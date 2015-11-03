@@ -1,7 +1,7 @@
 #Icarus
 
 ### The blog theme you may fall in love with, coming to Hexo. [Preview](https://github.com/huangjihua/icarus)
-![](http://i.imgur.com/UxQrZrg.png)
+![](http://i.imgur.com/klQeCEz.png)
 
 ## Installation
 
@@ -29,52 +29,82 @@ git pull
 ## Configuration
 
 ### Theme configuration example
-```r
-# Header
-menu:
-  Home: /
-  Archives: archives
-  Categories: categories # you need to add extra page to enable this, please see the config below.
-  Tags: tags             # you need to add extra page to enable this, please see the config below.
-  About: about
+    
+	# Logo
+	logo: css/images/logo.png # Empty this to unset logo
+	# Header
+	menu:
+	  首页: /
+	  归档: /archives
+	  #生活: /life
+	  #分类: /categories
+	  #标签: /tags
+	  关于: /about
+	
+	# Content
+	excerpt_link: 阅读全文 #Cooperate with `<!-- more -->` tag to show only part of the article in index pages.
+	fancybox: true   #  Enable [Fancybox]
+	archive_yearly: true #按年存档
+	
+	
+	# Profile
+	profile: true # whether to show profile bar
+	gravatar: false # whether to use gravatar with the email
+	showlogo: false # whether to show the logo in the header
+	
+	# Sidebar
+	sidebar: true # set to false if you don't want a sidebar
+	widgets:    #Widgets displaying in sidebar
+	#- search
+	- recent_posts
+	- category
+	- tag
+	- tagcloud
+	- archive
+	- weibo  #（需要在_widget目录下添加weibo.ejs）
+	thumbnail: true
+	
+	contacts:
+	  github: http://github.com/huangjihua 
+	  weibo:  http://www.weibo.com/236797891
+	  csdn: http://blog.csdn.net/huangjihua0402
+	  #twitter: '#'
+	  #facebook: '#'
+	  #dribbble: '#'
+	  rss: atom.xml #rss地址  默认即可
+	
+	# Links
+	links:
+	  hank: http://www.github.com/huangjihua
+	
+	# CDN
+	cdn: useso #If your site loads slowly change it to "google" , because "useso" is slow out of China
+	
+	addthis: #SNS分享，身在天朝，当然用“百度分享”，暂时默认，后面会介绍
+	  enable: true
+	  pubid:
+	  facebook: true
+	  twitter: true
+	  google: true
+	  pinterest: true
+	
+	# Miscellaneous 分享
+	google_site_verification:
+	google_analytics: #要使用google_analytics进行统计的话，这里需要配置ID，暂时默认，后面介绍
+	baidu_analytics: 07c425d4bcfc27b8686********
+	jiathis: true
+	favicon: favicon.png
+	baidushare: true
+	#twitter:
+	#google_plus:
+	#fb_admins:
+	#fb_app_id:
+	
+	#摘要摘取-自定义（需要修改_partial下的article.ejs）
+	auto_excerpt:
+	  enable: true
+	  length: 150 #默认截取的长度为 150 字符
 
-# Content
-excerpt_link: Read More
-fancybox: true
-
-# Sidebar
-sidebar: right
-widgets:
-- recent_posts
-- category
-- tag
-- tagcloud
-- archive
-thumbnail: true
-
-# Contacts
-contacts:
-  github: http://github.com/ppoffice/hexo-theme-icarus
-  twitter: '#'
-  facebook: '#'
-  dribbble: '#'
-  rss: atom.xml
-
-# Links
-links:
-  Hexo: http://hexo.io
-
-# Miscellaneous
-google_analytics:
-favicon: favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
-```
-
-- **excerpt_link** - Cooperate with `<!-- more -->` tag to show only part of the article in index pages.
-- **fancybox** - Enable [Fancybox].
 - **contacts** - Your social network links, RSS link, etc.
 - **widgets** - Widgets displaying in sidebar.
 - **thumbnail** - Whether to show post thumbnails in the sidebar and archive pages.
@@ -83,61 +113,53 @@ fb_app_id:
 - **favicon** - Favicon path.
 
 ### Site configuration example
-```r
-# Site
-title: Icarus
-subtitle:
-description: Hexo theme - Icarus
-author: PPOffice
-author_title: 'Web Developer & Designer'
-avatar: css/images/avatar.png
-location: 'Harbin, China'
-language: en
-timezone:
 
-...
+	# Site
+	title: Hank Huang's Blog
+	subtitle: Hank Huang's Blog
+	description: 关注WEB前端，前端开发
+	author: 黄继华
+	author_title: 'Web Developer & Designer'
+	avatar: css/images/avatar.png
+	location: 'Beijing, China' #- Where you live in.
+	follow: https://github.com/huangjihua/
+	language: zh-CN
+	timezone:  #时区
+	since: 2015 # The start year showing in your copyright section.
 
-# Disqus
-disqus_shortname:
-```
 
-- **author** - Your name.
-- **author_title** - Title to your occupation.
-- **avatar** - Your avatar image link.
-- **location** - Where you live in.
-- **disqus_shortname** - Your Disqus shortname.
+	# Disqus
+	#disqus_shortname:  #Your Disqus shortname.
+	# DuoShuo  #多说
+	duoshuo_shortname: duoshuo_username
+
 
 ### Post Thumbnail & Banner
 
 You can add a thumbnail and a banner to each post by adding the following lines into your post source files' front-matter:
-```r
-title: Demo
-date: 2015-01-01
-...
-# add those
-thumbnail: http://example.com/thumbnail.jpg
-banner: http://example.com/banner.jpg
-```
+
+	title: Demo
+	date: 2015-01-01
+	...
+	# add those
+	thumbnail: http://example.com/thumbnail.jpg
+	banner: http://example.com/banner.jpg
+
 
 ### Custom Categories & Tags Pages
 
 To enable custom categories page and tags page, just copy the `categories` folder and `tags` folder under your theme's `_source` foler into your site's `source` folder. Then edit theme's _config.yml and add the following lines: 
-```r
 # Header
-menu:
-  ...
-  Categories: categories # -> add this line
-  Tags: tags # -> and add this line
-  ...
-```
-
+	menu:
+	  ...
+	  Categories: categories # -> add this line
+	  Tags: tags # -> and add this line
+	  ...
 ### Languages
 
 English and Simplified Chinese are the default languages of the theme. You can add translations in the `languages` folder and change the default language in blog's `_config.yml`.
 
-```r
-language: zh-CN
-```
+	language: zh-CN
 
 ## Features
 
